@@ -1,0 +1,20 @@
+<div class="wrap-login">
+
+
+  <div class="logo-container">
+    <h1>Login to Quick Link.io</h1>
+  </div>
+  <div class="login-container">
+    <div>
+      <div class="login-form">
+        <mat-form-field class="login-full-width">
+          <input [(ngModel)]="token" matInput placeholder="Verification token" [value]="token" id="token">
+        </mat-form-field>
+        <div class="btn-form">
+          <button mat-raised-button (click)="login()">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

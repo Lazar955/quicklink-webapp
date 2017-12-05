@@ -1,0 +1,30 @@
+.link-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.link-card-wrap {
+      margin-top:2%;
+}
+.link-card-wrap input{
+    width: 100% !important;
+    
+}
+.mat-form-field{
+    display: block !important;
+}
+
+.mat-card-actions{
+    text-align: right;
+}
+
+.table{
+    margin-top:2%;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-icon {
+  padding: 0 14px;
+}

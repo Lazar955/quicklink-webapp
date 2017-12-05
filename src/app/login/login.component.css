@@ -1,0 +1,40 @@
+.login-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login-form label {
+  text-align: center;
+}
+
+.login-full-width {
+  width: 100%;
+}
+
+.login-full-width input {
+  text-align: center;
+}
+
+.login-container {
+  margin: 0 auto;
+}
+
+.logo-container {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.btn-form {
+  text-align: center;
+}
+
+.wrap-login {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+}
