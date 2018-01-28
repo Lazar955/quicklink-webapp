@@ -30,13 +30,19 @@ export class BrokerService {
     localStorage.removeItem('Bearer');
   }
 
-  loginToken(token) {
+  getIPaddress(){
+    return this.http.get("http://freegeoip.net/json/")
+  }
+
+  loginToken(token,ipAddress,device) {
 
     let headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json');
 
     let data = {
-      tokenValue: token
+      tokenValue: token,
+      device: device,
+      ip:ipAddress
     }
 
     let body = JSON.stringify(data);

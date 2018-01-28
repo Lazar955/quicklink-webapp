@@ -18,17 +18,22 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
- 
-    console.log(this.token)
-    this.broker.loginToken(this.token).subscribe((d ) => {
-      let data = d as any;
-      console.log(data)
-      localStorage.setItem('Bearer',data.BearerToken)
-      localStorage.setItem('User',JSON.stringify({"userId":data.user.user_id,"username":data.user.username}))
-      this.router.navigate(['links']);
-    },err=>{
-       alert(err.error.messages)
-      console.log(err.error)
+    this.broker.getIPaddress().subscribe(x=>{
+      let data = x as any
+      this.broker.loginToken(this.token,data.ip,navigator.userAgent).subscribe((d ) => {
+        console.log(this.token)
+      
+        let data = d as any;
+        console.log(data)
+        localStorage.setItem('Bearer',data.BearerToken)
+        localStorage.setItem('User',JSON.stringify({"userId":data.user.user_id,"username":data.user.username}))
+        this.router.navigate(['links']);
+      },err=>{
+         alert(err.error.messages)
+        console.log(err.error)
+      })
     })
+   
+
   }
 }
